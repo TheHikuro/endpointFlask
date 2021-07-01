@@ -4,8 +4,10 @@ from mongoengine import *
 from mongoengine import connect
 import mongoengine as db
 from api_constants import mongodb_password
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 database_name = "Trombinoscoop"
 DB_URI = "mongodb+srv://Hikuro:{}@cluster0.q1kcl.mongodb.net/{}?retryWrites=true&w=majority".format(
